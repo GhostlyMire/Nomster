@@ -79,10 +79,12 @@
 
 <div class="clear"></div>
 
+<div class="photos">
 <% @place.photos.each do |photo| %>
-  <%= image_tag photo.picture %>
+  <%= image_tag photo.picture, class: 'photo' %>
   <%= photo.caption %>
 <% end %>
+</div>
 
 <% @place.comments.each do |comment| %>
   <div class="col-xs-12 col-sm-6">
